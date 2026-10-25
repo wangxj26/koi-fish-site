@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>锦鲤输入法（鱼语）· 会卖萌的大肥鱼桌宠，也是你的语音输入法</title>
+  <meta name="description" content="锦鲤输入法（鱼语）：一只住在桌面上的大肥鱼。106 段动画、会聊天、会看屏幕、跟着音乐冒歌词；想打字时长按它说话，松开鼠标，带标点的文字自动输入到你正在输入的窗口。SenseVoice 本地离线识别，中英日韩粤五语种。">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="锦鲤输入法（鱼语）· 会卖萌的大肥鱼桌宠，也是你的语音输入法">
+  <meta property="og:description" content="106 段动画的桌面宠物，长按说话即刻成字：带标点、完全离线、自动输入到任意窗口。Windows 10 / 11。">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="site-header" id="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="锦鲤输入法 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/pet/logo.webp" alt="" width="34" height="29" decoding="async">
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">锦鲤输入法</span>
+          <span class="brand-sub">鱼语</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="打开导航菜单" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#pet">桌宠</a>
+        <a href="#ime">语音输入</a>
+        <a href="#play">玩法</a>
+        <a href="#specs">规格</a>
+        <a href="#faq">常见问题</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://github.com/wangxj26/dsh-pet-indesktop/releases/latest/download/dsh-pet-standalone-webm-chat-setup.exe" target="_blank" rel="noopener noreferrer">
+          下载安装包
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top" class="anchor-offset" aria-hidden="true"></span>
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Windows 桌面宠物 · 内置语音输入法
+          </p>
+          <h1 id="hero-title">一只会卖萌的大肥鱼，<br>也是你的语音输入法</h1>
+          <p class="lede">
+            它平时住在你的桌面上：游来游去、打瞌睡、敲代码、跟你聊天、跟着音乐冒歌词。
+            想打字的时候按住它说话，松开鼠标，带标点的文字就落进你正在输入的窗口。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://github.com/wangxj26/dsh-pet-indesktop/releases/latest/download/dsh-pet-standalone-webm-chat-setup.exe" target="_blank" rel="noopener noreferrer" download>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none"
+                   stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 19h14"/>
+              </svg>
+              下载安装包 v4.4.0
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#pet">认识大肥鱼</a>
+          </div>
+          <p class="hero-meta">
+            Windows 10 / 11 · 106 段动画 · 完全离线 · 免费
+          </p>
+        </div>
+
+        <div class="hero-art">
+          <div class="art-halo" aria-hidden="true"></div>
+
+          <figure class="pet-stage">
+            <span class="pet-bubble" aria-hidden="true">今天也吃白饭～</span>
+            <img class="pet-figure" src="assets/pet/hero.webp" alt="大肥鱼桌宠：蓝发鱼耳、穿围裙的 Q 版角色，站在深色桌面上" width="212" height="271">
+          </figure>
+
+          <!-- 语音面板示意（产品 UI 复刻，装饰性） -->
+          <div class="voice-panel" role="img"
+               aria-label="语音输入法面板示意：正在聆听 3 秒，下方有“完成并输入”和“取消”按钮">
+            <div class="vp-head">
+              <span class="vp-mic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round">
+                  <rect x="9" y="3" width="6" height="10" rx="3"/>
+                  <path d="M6 11a6 6 0 0 0 12 0"/><path d="M12 17v4"/>
+                </svg>
+              </span>
+              <span class="vp-meta">
+                <span class="vp-title">语音输入法</span>
+                <span class="vp-note">SenseVoice · 松开即转写</span>
+              </span>
+              <span class="vp-live" aria-hidden="true"></span>
+            </div>
+
+            <div class="vp-status">
+              <span class="vp-timer">正在聆听<span class="vp-dots">…</span> <b>0:03</b></span>
+              <span class="vp-wave" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </span>
+            </div>
+
+            <span class="vp-progress" aria-hidden="true"><i></i></span>
+
+            <div class="vp-actions" aria-hidden="true">
+              <span class="vp-btn vp-btn-primary">完成并输入</span>
+              <span class="vp-btn">取消</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 桌宠 ============ -->
+    <section class="section" id="pet" aria-labelledby="pet-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">桌宠</p>
+          <h2 id="pet-title">先是一只合格的桌面宠物</h2>
+          <p class="section-lede">
+            不是贴在屏幕上的静态壁纸。它会游、会转身、会打盹，点一下有反应，拖起来有惯性——
+            106 段手绘动画，够它自己找事做一整天。
+          </p>
+        </div>
+
+        <ul class="card-grid">
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2.5"/>
+                <path d="M8 12h.01M12 12h.01M16 12h.01"/>
+              </svg>
+            </span>
+            <h3>106 段动画，自己找事做</h3>
+            <p>待机呼吸、转身、游走、点击、拖拽，外加 89 段随机小动作：抛接三球、下五子棋、写代码、偷吃零食、原地小憩……歇一会儿再看，它又换了个花样。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+                <circle cx="12" cy="12" r="4.2"/>
+              </svg>
+            </span>
+            <h3>点一下就有反应</h3>
+            <p>点击会弹跳回应并播放 Q 弹音效（可换成自己的 wav），还会随机自言自语。拖动带惯性，甩出去会自己飘回来。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H9l-5 4z"/>
+                <path d="M8.5 9.5h7"/>
+              </svg>
+            </span>
+            <h3>桌面上的 AI 搭档</h3>
+            <p>独立对话窗口，可接 DeepSeek 或任意 OpenAI 兼容接口：流式输出、Markdown 渲染、多会话管理，会话按角色隔离，换角色不会串话。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="13" rx="2.2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </span>
+            <h3>看看你的屏幕</h3>
+            <p>右键「看看屏幕」：截屏连同前台窗口标题交给视觉模型，用它自己的口吻回你一句关心或吐槽，结果同步进对话里，可以接着追问。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V6l10-2v12"/>
+                <circle cx="6.5" cy="18" r="2.6"/><circle cx="16.5" cy="16" r="2.6"/>
+              </svg>
+            </span>
+            <h3>跟着音乐冒歌词</h3>
+            <p>读取系统媒体控制里的当前曲目，气泡里同步显示歌词；遇到不上报进度的播放器，还能用「歌词对齐」手动校正一行。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 4h9l3 3v13H6z"/><path d="M9 9h6M9 13h6M9 17h3"/>
+              </svg>
+            </span>
+            <h3>还能帮你记事</h3>
+            <p>待办面板随时增删改，到期用气泡提醒（看不到桌宠时走桌面通知）；托盘常驻、双击显隐，右键菜单还能自己编排。</p>
+          </li>
+        </ul>
+
+        <div class="pet-gallery">
+          <figure>
+            <img src="assets/pet/g-juggle.webp" alt="大肥鱼在抛接三个球" width="218" height="292" loading="lazy">
+            <figcaption>抛接三球</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/pet/g-code.webp" alt="大肥鱼抱着一台笔记本在敲代码" width="208" height="269" loading="lazy">
+            <figcaption>写代码</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/pet/g-love.webp" alt="被点击后冒出爱心、开心雀跃的大肥鱼" width="241" height="312" loading="lazy">
+            <figcaption>收到爱心</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/pet/g-snack.webp" alt="偷吃零食被抓住的大肥鱼" width="218" height="263" loading="lazy">
+            <figcaption>偷吃被抓</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/pet/g-sleep.webp" alt="趴着睡着、头顶冒 Z 的大肥鱼" width="224" height="301" loading="lazy">
+            <figcaption>打盹中</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/pet/g-flower.webp" alt="凭空变出花朵的大肥鱼" width="248" height="295" loading="lazy">
+            <figcaption>凭空生花</figcaption>
+          </figure>
+        </div>
+        <p class="pet-gallery-note">以上都是它自己的动画帧，不是插画。</p>
+      </div>
+    </section>
+
+    <!-- ============ 语音输入 ============ -->
+    <section class="section section-alt" id="ime" aria-labelledby="ime-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">语音输入</p>
+          <h2 id="ime-title">想打字的时候，它立刻变输入法</h2>
+          <p class="section-lede">
+            没有唤醒词、没有额外面板、不用切输入法。按住、说话、松开，就这三步。
+          </p>
+        </div>
+
+        <ul class="card-grid">
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="3" width="6" height="10" rx="3"/><path d="M6 11a6 6 0 0 0 12 0"/>
+                <path d="M12 17v3"/>
+              </svg>
+            </span>
+            <h3>长按即说，松手即写</h3>
+            <p>按住大肥鱼约 0.6 秒唤起录音，松开鼠标 1～2 秒出结果，文字自动键入光标所在窗口，不打断心流。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9l6.4 3.7"/>
+              </svg>
+            </span>
+            <h3>离线识别，语音不出门</h3>
+            <p>SenseVoice-Small 在本机 CPU 上跑，录音不联网、不上传，断网也能用，隐私只留在你电脑里。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h16M4 12h10M4 17h13"/>
+              </svg>
+            </span>
+            <h3>自带标点，出口成章</h3>
+            <p>识别结果自动补标点，数字自动规整（「一百二十三」→ 123），说完就是能直接发出的句子。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.6"/><path d="M3.6 12h16.8"/>
+                <path d="M12 3.4c2.6 2.4 4 5.4 4 8.6s-1.4 6.2-4 8.6c-2.6-2.4-4-5.4-4-8.6s1.4-6.2 4-8.6Z"/>
+              </svg>
+            </span>
+            <h3>五语种，混着说也行</h3>
+            <p>中文、英文、日语、韩语、粤语自动识别，中英混着说也有明显标点与断句。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="M7 10h6M7 14h4"/>
+              </svg>
+            </span>
+            <h3>任意窗口都能输入</h3>
+            <p>微信、QQ、Word、浏览器输入框都吃；万一目标程序拒绝模拟输入，会自动复制到剪贴板并在面板上提示你 Ctrl+V。</p>
+          </li>
+
+          <li class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4 4.8 8v8L12 20l7.2-4V8z"/><path d="M12 12v8M12 12 4.8 8M12 12l7.2-4"/>
+              </svg>
+            </span>
+            <h3>误触也不添乱</h3>
+            <p>长按了却没说话，不会打出一堆乱字，面板直接提示「未识别到语音」；按 Esc 或点「取消」随时放弃这一句。</p>
+          </li>
+        </ul>
+
+        <div class="section-head steps-head">
+          <p class="kicker">怎么用</p>
+          <h3 id="how-title">三步，一次呼吸的时间</h3>
+        </div>
+
+        <ol class="steps" aria-labelledby="how-title">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <div class="step-body">
+              <h3>长按大肥鱼</h3>
+              <p>鼠标按住约 0.6 秒，面板弹出，开始录音。按住不动即可，移动太多会被当成拖拽。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <div class="step-body">
+              <h3>对着它说话</h3>
+              <p>正常语速说完整句，面板上会显示已录时长，不用刻意停顿。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <div class="step-body">
+              <h3>松手，字就出来了</h3>
+              <p>松开鼠标，本地转写 1～2 秒，文字自动落进光标所在的位置，接着按回车就能发。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 玩法 ============ -->
+    <section class="section" id="play" aria-labelledby="play-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">玩法</p>
+          <h2 id="play-title">藏在右键菜单里的小花样</h2>
+          <p class="section-lede">
+            菜单还能自己编排：改名字、换图标、挪进子菜单。下面这些是出厂自带的小心思。
+          </p>
+        </div>
+
+        <ul class="mini-grid">
+          <li class="mini">
+            <h3>边缘探头</h3>
+            <p>拖到屏幕左右边缘，它会歪着身子探出头来，点一下才肯露全脸。</p>
+          </li>
+          <li class="mini">
+            <h3>黄金回旋</h3>
+            <p>连点越转越快，从一圈 0.7 秒一路加速到 0.2 秒。</p>
+          </li>
+          <li class="mini">
+            <h3>拖文件「喂饭」</h3>
+            <p>把文件拖到它身上会播放吃掉的动画并记个数——不会真的删除你的文件。</p>
+          </li>
+          <li class="mini">
+            <h3>生小肥鱼</h3>
+            <p>菜单一键再开一只，自动避让位置、互不打扰，多只还能共用同一条解码链。</p>
+          </li>
+          <li class="mini">
+            <h3>快捷启动</h3>
+            <p>把常用程序放进右键菜单，两行自定义，随手就开。</p>
+          </li>
+          <li class="mini">
+            <h3>锁定位置 / 透明度</h3>
+            <p>锁定后点不动也拖不走；透明度 10%–100% 随手一拉，保存即生效。</p>
+          </li>
+          <li class="mini">
+            <h3>全局快捷键</h3>
+            <p>AI 对话、看看屏幕、截图提问可各绑一个系统级组合键，别的程序前台也生效。</p>
+          </li>
+          <li class="mini">
+            <h3>省电模式</h3>
+            <p>隐藏或闲置时暂停解码，CPU 接近 0；开机自启一个勾选搞定。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 规格 ============ -->
+    <section class="section section-alt" id="specs" aria-labelledby="specs-title">
+      <div class="shell shell-narrow">
+        <div class="section-head">
+          <p class="kicker">规格</p>
+          <h2 id="specs-title">技术细节，摆在明面上</h2>
+          <p class="section-lede">没有云端中转，没有隐藏进程，配置和数据都在你自己的用户目录里。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <caption class="sr-only">锦鲤输入法（鱼语）技术规格</caption>
+            <thead>
+              <tr><th scope="col">项目</th><th scope="col">参数</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">产品形态</th><td>Windows 桌面宠物（透明置顶窗口）+ 内置语音输入法</td></tr>
+              <tr><th scope="row">桌宠素材</th><td>106 段透明 WebM 动画（640×360 · 24fps），含 89 段随机动作</td></tr>
+              <tr><th scope="row">动画播放</th><td>0.5x–4.0x 变速、随机等待间隔、隐藏即暂停解码</td></tr>
+              <tr><th scope="row">AI 对话</th><td>DeepSeek / 任意 OpenAI Chat Completions 兼容接口，流式输出 + Markdown</td></tr>
+              <tr><th scope="row">识别引擎</th><td>SenseVoice-Small（int8 量化）</td></tr>
+              <tr><th scope="row">推理运行时</th><td>sherpa-onnx（本地 CPU，无需 GPU）</td></tr>
+              <tr><th scope="row">支持语言</th><td>中文 / 英文 / 日语 / 韩语 / 粤语</td></tr>
+              <tr><th scope="row">交付方式</th><td>自动键入当前窗口，失败回退剪贴板</td></tr>
+              <tr><th scope="row">触发方式</th><td>鼠标长按约 0.6 秒（时长可调）</td></tr>
+              <tr><th scope="row">系统要求</th><td>Windows 10 / 11（64 位）+ 麦克风</td></tr>
+              <tr><th scope="row">本地模型</th><td>约 226 MB（设置页内一键下载，仅首次）</td></tr>
+              <tr><th scope="row">安装包</th><td>646.3 MB（含完整桌宠素材与识别引擎）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 下载 ============ -->
+    <section class="section" id="download" aria-labelledby="download-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">下载</p>
+          <h2 id="download-title">把它放到你的桌面上</h2>
+          <p class="section-lede">
+            免管理员安装，装完双击桌面上的大肥鱼就能用。当前版本
+            <strong>v4.4.0</strong>（2026-10-25 发布）；装好后软件会自己检查更新，有新版本会弹提示。
+          </p>
+        </div>
+
+        <div class="download-grid">
+          <div class="dl-card dl-card-primary">
+            <div class="dl-head">
+              <span class="dl-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 19h14"/>
+                </svg>
+              </span>
+              <div>
+                <h3>安装包（推荐）</h3>
+                <p class="dl-meta">v4.4.0 · 646.3 MB · 中文向导 · 无需管理员权限</p>
+              </div>
+            </div>
+            <p class="dl-desc">双击按向导装好，自动建好桌面快捷方式与开始菜单项，卸载走系统「应用和功能」。安装后在系统里显示为「鱼语输入法」（本项目的副名），与官网主名「锦鲤输入法」是同一个软件。</p>
+            <a class="btn btn-primary btn-block" href="https://github.com/wangxj26/dsh-pet-indesktop/releases/latest/download/dsh-pet-standalone-webm-chat-setup.exe" target="_blank" rel="noopener noreferrer" download>
+              从 GitHub 下载 .exe
+            </a>
+            <p class="dl-netdisk">
+              上面的链接始终指向最新版。备用渠道（国内直链慢时更快）：
+              <a href="https://pan.quark.cn/s/e505317ecf95?pwd=f9rg" target="_blank" rel="noopener noreferrer">夸克网盘</a> · 提取码 <code>f9rg</code>
+            </p>
+            <p class="dl-hash">SHA-256 · <span class="dl-hash-value">c5036590ea526d3772c317c8f70d01accd1effe3802704fa196343e79b6e2552</span></p>
+          </div>
+
+          <div class="dl-card">
+            <div class="dl-head">
+              <span class="dl-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 8V5.6A1.6 1.6 0 0 1 5.6 4H8M16 4h2.4A1.6 1.6 0 0 1 20 5.6V8"/>
+                  <path d="M20 16v2.4A1.6 1.6 0 0 1 18.4 20H16M8 20H5.6A1.6 1.6 0 0 1 4 18.4V16"/>
+                  <path d="M8 12h8"/>
+                </svg>
+              </span>
+              <div>
+                <h3>绿色便携版</h3>
+                <p class="dl-meta">v4.4.0 · 719.4 MB · 解压即用 · 免安装，绿色版</p>
+              </div>
+            </div>
+            <p class="dl-desc">
+              便携包体积原因未附在 GitHub Release，走夸克网盘。解压后进入
+              <code>dsh-pet-standalone-webm-chat</code> 文件夹，双击其中的
+              <code>dsh-pet-standalone-webm-chat.exe</code> 即可运行。
+            </p>
+            <a class="btn btn-ghost btn-block" href="https://pan.quark.cn/s/889c977a92ef?pwd=a2ns" target="_blank" rel="noopener noreferrer">
+              从夸克网盘下载 .zip
+            </a>
+            <p class="dl-netdisk">夸克网盘 · 提取码 <code>a2ns</code>（上面的链接已带提取码，通常无需手动输入）</p>
+            <p class="dl-hash">SHA-256 · <span class="dl-hash-value">29e6b08f5a10c1339ab84447a628c92972493a04920b8a8087d174669b9d2fa5</span></p>
+          </div>
+        </div>
+
+        <p class="hash-hint">校验方法：命令提示符执行 certutil -hashfile &lt;文件名&gt; SHA256，与上方一致即文件完整。</p>
+
+        <div class="install">
+          <h3 class="install-title">装好之后，三步就能开口</h3>
+          <ol class="install-steps">
+            <li>双击安装包，按中文向导一路下一步（装在当前用户目录，不需要管理员密码）。</li>
+            <li>首次长按大肥鱼时，到托盘图标右键「语音输入法设置」里点下载 SenseVoice 模型（约 226 MB，只需一次）。</li>
+            <li>光标点进任意输入框，长按大肥鱼说话，松开即输入。</li>
+          </ol>
+          <p class="notice">
+            首次运行 Windows 可能提示「未知发布者」，选择「仍要运行」即可。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 常见问题 ============ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="shell shell-narrow">
+        <div class="section-head">
+          <p class="kicker">常见问题</p>
+          <h2 id="faq-title">你可能想知道的</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary>
+              <span>语音会上传到服务器吗？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>不会。识别在本机 CPU 上完成（SenseVoice + sherpa-onnx），模型文件也在本地，断网照样用。 只有你主动使用「AI 对话」「看看屏幕」这类需要大模型的功能时，内容才会发给你自己配置的模型服务商。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>为什么第一次要下载 226 MB 的模型？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>高精度中文识别的模型体积本来就大。为了不让安装包再胖一圈，模型做成首次使用时在设置页一键下载， 下载一次永久可用，之后完全离线。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>识别不准怎么办？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>靠近麦克风、避开强噪环境效果最稳。设置页里可以切换识别引擎、调整长按时长； 面板上会显示录入时长，太短的句子容易缺字，建议一句说完再松手。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>能输入到哪些程序？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>任何接受键盘输入的窗口都可以。若目标程序拒绝模拟输入，文字会自动复制到剪贴板， 面板上会提示你按 Ctrl+V 粘贴。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>长按没反应、面板没弹出来？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>先确认托盘图标还在（退出过就重新打开）；长按时按住别动，移动超过约 12px 会被判定为拖拽； 如果目标输入框本身是全屏游戏或受保护窗口，模拟输入可能被系统拦下，这时走剪贴板兜底。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>桌宠会不会很吃性能？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>隐藏桌宠后动画解码与定时器会暂停，CPU 接近 0；桌宠设置里还有「省电模式」可以停掉后台预热。 多只桌宠共用一条解码链，长时间挂着内存也不会一路上涨。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>AI 对话和看看屏幕要花钱吗？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>软件本身免费，语音识别也在本地免费跑。AI 对话、看看屏幕需要你自己填一个模型服务的 API Key， 费用按该服务商的计费走；不填也不影响桌宠和语音输入。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>只想用输入法，不想看到桌宠？</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>右键菜单或托盘里可以「隐藏桌宠」，隐藏后仍可从托盘菜单点「语音输入」唤起录音面板， 用完再显示回来即可。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- ============ 开源与致谢 ============ -->
+    <section class="section" id="credits" aria-labelledby="credits-title">
+      <div class="shell shell-narrow">
+        <div class="section-head">
+          <p class="kicker">开源与致谢</p>
+          <h2 id="credits-title">站在 MerZlin 的肩膀上</h2>
+          <p class="section-lede">
+            本项目是开源项目 <strong>dsh-pet-indesktop</strong> 的二次开发版本：桌宠本体、动画素材、
+            菜单系统、聊天窗口等均来自原项目，版权归原作者 MerZlin 所有，遵循 MIT 许可。
+            本版本在此基础上新增了语音输入法。
+          </p>
+        </div>
+
+        <ul class="credit-list">
+          <li>
+            <h3>本版本新增</h3>
+            <p>语音输入法：长按大肥鱼录音 → SenseVoice 本地离线转写（自动带标点）→ 文字自动键入当前窗口；配套托盘入口、独立设置页与模型下载管理。</p>
+          </li>
+          <li>
+            <h3>原项目</h3>
+            <p>
+              作者 <strong>MerZlin</strong>，项目地址
+              <a href="https://github.com/MerZlin/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">github.com/MerZlin/dsh-pet-indesktop ↗</a>，
+              MIT License，Copyright (c) 2026 Merzlin。安装包内随附完整的 LICENSE 与 THIRD_PARTY_NOTICES.md。<br>
+              本版本（含语音输入法的改动）源码开放在
+              <a href="https://github.com/wangxj26/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">github.com/wangxj26/dsh-pet-indesktop ↗</a>，
+              差异清单见仓库里的 <code>FORK.md</code>。
+            </p>
+          </li>
+          <li>
+            <h3>语音识别</h3>
+            <p>SenseVoice-Small（阿里通义实验室，Apache-2.0 许可）+ sherpa-onnx 推理运行时，全部在本机 CPU 完成，语音不上传。</p>
+          </li>
+        </ul>
+
+        <p class="credit-cta">
+          <a class="btn btn-ghost" href="https://github.com/wangxj26/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/>
+            </svg>
+            查看本版本源码 ↗
+          </a>
+          <a class="btn btn-ghost btn-credits" href="https://github.com/MerZlin/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">
+            上游原项目 ↗
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand"><img class="footer-mark" src="assets/pet/logo.webp" alt="" width="24" height="20" loading="lazy"> 锦鲤输入法 <span class="brand-sub">鱼语</span></p>
+        <p class="footer-tag">让说话，比打字更快。</p>
+      </div>
+      <div class="footer-right">
+          <p class="footer-credit">
+            基于 <a href="https://github.com/MerZlin/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">MerZlin 的 dsh-pet-indesktop ↗</a>（MIT）二次开发 · 新增语音输入模块
+          </p>
+          <p class="footer-credit">
+            识别引擎 SenseVoice（Apache-2.0）· 本地离线推理 ·
+            <a href="https://github.com/wangxj26/dsh-pet-indesktop" target="_blank" rel="noopener noreferrer">源码在 GitHub ↗</a>
+          </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 装饰：几只大肥鱼在页面底部散步（纯装饰，不可交互） -->
+  <div class="pet-walkers" id="pet-walkers" aria-hidden="true">
+    <img class="pet-walker pet-walker-lg" src="assets/pet/walk-a.webp" alt="" width="157" height="200" decoding="async">
+    <img class="pet-walker" src="assets/pet/walk-b.webp" alt="" width="158" height="200" decoding="async">
+    <img class="pet-walker" src="assets/pet/walk-d.webp" alt="" width="160" height="200" decoding="async">
+    <img class="pet-walker" src="assets/pet/walk-f.webp" alt="" width="194" height="200" decoding="async">
+    <img class="pet-walker" src="assets/pet/walk-h.webp" alt="" width="200" height="118" decoding="async">
+    <img class="pet-walker pet-walker-sm" src="assets/pet/walk-c.webp" alt="" width="194" height="200" decoding="async">
+    <img class="pet-walker pet-walker-sm" src="assets/pet/walk-e.webp" alt="" width="155" height="200" decoding="async">
+    <img class="pet-walker pet-walker-lg" src="assets/pet/walk-g.webp" alt="" width="158" height="200" decoding="async">
+  </div>
+
+  <script src="assets/main.js" defer></script>
+  <script src="assets/walkers.js" defer></script>
+</body>
+</html>
