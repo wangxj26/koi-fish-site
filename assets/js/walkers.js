@@ -1,12 +1,12 @@
 /**
- * 页面上散步的大肥鱼（纯装饰）
+ * 底部巡游的小鱼（纯装饰）
  *
  * 口径：
- * - 三张精灵图（`assets/pet/walk-*.webp`，产品自带走动动画的帧）在整个视口里**二维漫游**：
+ * - `assets/pet/walk-*.webp`（产品自带走动动画的角色）在整个视口里二维漫游：
  *   朝一个方向慢慢飘，隔一会儿随机转向，撞到视口边缘就拐弯，偶尔原地发呆几秒；
  * - 朝向跟随水平运动方向翻转（`scaleX`），所以左飘右飘看起来都是"面朝前进方向"；
- * - 图层 `position: fixed` 覆盖整个视口、`pointer-events: none`，绝不挡点击；
- *   层级 40 低于吸顶导航（100），所以它们会从导航条下面穿过去，不会盖住菜单；
+ * - 图层 `position:fixed` 覆盖整个视口、`pointer-events:none`，绝不挡点击；
+ *   z-index:0 低于正文层（.hero/.sec/.ft 已提到 1）与导航（.hdr 50）、底栏（.dock 40）；
  * - `prefers-reduced-motion` 生效时不启动（CSS 也把整层隐藏）；
  * - 标签页切后台时停掉 rAF，回来从当前位置继续；
  * - 视口变化时把跑到外面的鱼拉回可视范围。
@@ -17,10 +17,10 @@
 (function () {
   'use strict';
 
-  var layer = document.getElementById('pet-walkers');
+  var layer = document.getElementById('walkers');
   if (!layer) return;
 
-  var sprites = Array.prototype.slice.call(layer.querySelectorAll('.pet-walker'));
+  var sprites = Array.prototype.slice.call(layer.querySelectorAll('.walker'));
   if (!sprites.length) return;
 
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
